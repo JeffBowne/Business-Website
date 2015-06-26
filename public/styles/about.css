@@ -1,0 +1,45 @@
+.content {
+  height: 700px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 3.5vw;
+  margin-top: -20px;
+  border-bottom: solid black 1px;
+  border-left: solid black 7px;
+  border-right: solid black 7px;
+  border-radius: 10px 10px 100px 100px;
+}
+
+.buffer {
+  padding: 50px;
+}
+
+h1 {
+  margin: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.aboutblurb {
+  margin-left: 90px;
+  margin-right: 90px;
+  padding: 5px;
+}
+
+.infobar {
+  margin-left: 90px;
+  margin-right: 50px;
+  margin-bottom: 80px;
+  padding: 7px;
+  line-height: 30px;
+}
+
+.aboutpic {
+  float: right;
+  max-width: 40%;
+  max-height: 400px;
+  padding-right: 90px;
+  padding-top: 29px;
+}
