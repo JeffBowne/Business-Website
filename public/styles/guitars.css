@@ -1,0 +1,84 @@
+.content {
+	height: 1600px;
+}
+
+
+.buffer {
+	padding: 50px;
+}
+
+.headline {
+	text-align: center;
+	font-size: 3.5vw;
+	margin-top: -20px;
+	border-bottom: solid black 1px;
+	border-left: solid black 7px;
+	border-right: solid black 7px;
+	border-radius: 10px 10px 100px 100px;
+}
+
+.guitarstitles {
+	text-align: center;
+	margin: 60px 0 -1px 0;
+	font-size: 2vw;
+	border-bottom: double black 4px;
+	/*border-left: double black 4px;*/
+	/*border-right: double black 4px;*/
+	/*border-radius: 10px 10px 100px 100px;*/
+}
+
+ .guitarsimgs {
+	display: block;
+	width: 50%;
+	margin: 0px auto;
+	border: double black 4px;
+}
+
+
+/*---------------------------------------------------------------*/
+
+.guitimg {
+	display: block;
+	border: double black 4px;
+	width: 99%;
+	margin: 0 auto;
+}
+
+.gstats {
+	font-size: 1.3vw;
+	margin-top: 0px;
+}
+
+
+
+table {
+	table-layout: fixed;
+	width: 100%;
+	font-size: 1.2vw;
+}
+
+table tr:nth-child(odd) {
+   background-color: rgba(204,204,204,.6);
+}
+table tr:nth-child(even) {
+   background-color: rgba(221,221,221,.6);
+}
+table td:nth-child(odd) {
+	text-align: right;
+	border-left: solid black 4px;
+	border-radius: 20px 0 0 20px;
+}
+table td:nth-child(even) {
+	text-align: left;
+	border-right: solid black 4px;
+	border-radius: 0 20px 20px 0;
+}
+
+
+iframe {
+	display: block;
+	margin: 30px auto;
+	border: double black 5px;
+}
+
+
