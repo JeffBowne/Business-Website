@@ -1,0 +1,96 @@
+0m<!DOCTYPE html>
+<html>
+	<head>
+		<title>DiPinto Guitars</title>
+		<link rel="stylesheet" type="text/css" href="../public/styles/mainstyles.css">
+		<link rel="stylesheet" type="text/css" href="../public/styles/questions.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<style>
+		body{ font-size: 15pt; text-align:center;}
+		#overlay { position:fixed; top:0; left:0; right:0; bottom:0; opacity:0; background-color:#000; visibility:hidden;}
+		#contact_thanks {
+			visibility:hidden; opacity:0;	position:fixed; top:20px; bottom:20px; right:10px; left: 10px; z-index:2; background-color:#fff; padding:10px	;
+		}
+		</style>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<meta charset="UTF-8">
+		<script>
+		$(document).on('ready',function(){
+			$('#contact').on('submit',function(event){		//pass the event thru as a parameter
+				event.preventDefault();		//we stop the form from submitting by calling
+																	//preventDefault() on our event
+				$.ajax({	url: 		"/questions",
+									method: "POST",
+									data: { name: $('#contact input[name="name"]').val(),
+													email: $('#contact input[name="email"]').val(),
+													message: $('#contact textarea[name="message"]').val()} 
+								}).done(function(){
+									$('#overlay').css('visibility','visible').animate({ opacity: "0.9"}, 2000, function(){
+										$('#contact_thanks').css('visibility','visible').animate({ opacity: "1" });
+									});
+								});
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<a href="cover.html"><img class='cornerlogo' src="../public/images/logo.png" alt="DiPinto Guitars Logo"></a>
+		
+		<nav>
+			<ul>
+				<li><a href="about.html"><strong>ABOUT</strong></a></li>
+				<li><a href="guitars.html"><strong>GUITARS</strong></a></li>
+				<li><a href="questions.html"><strong>QUESTIONS</strong></a></li>
+				<li><a href="testimonials.html"><strong>TESTIMONIALS</strong></a></li>
+			</ul>
+		</nav>
+
+		<div class='content'>
+			<div class='buffer'>
+					<div class='testimonialsheader'>
+							<h1 class='headline'>Questions</h1>
+					</div>
+					<h2>FAQ/CONTACT</h2>
+
+					<div class='faq'>
+						<dl>
+						<dt><u> Can I order a DiPinto direct from DiPinto Guitars?</u></dt>
+							<dd><li>DiPinto does not ship direct anymore. Please contact us to find a DiPinto Dealer that can help you. We have most of our dealers listed on our dealer page.</li></dd>
+						<dt><u>How do I go about getting a custom made guitar?</u></dt>
+							<dd><li>Contact us via facebook for any inquiries about customizations. Or, if you are not on facebook, give us a call at 215-427-7805.</li></dd>
+						<dt><u>Are USA made DiPinto Guitars available?</u></dt>
+							<dd><li>Handmade USA DiPintos are no longer in production. However, from time to time our custom shop will produce a handmade model available for sale to the public. Check on our facebook page or call the shop.</li></dd>
+						<dt><u>I am a professional musician, can I get a DiPinto sponsorship?</u></dt>
+							<dd><li>We have a few levels of sponsorship that we use when working with artists. If you are currently touring and supported by a label, you are probably qualified for an artist discount. Contact us through facebook, please include a link to your artist site.</li></dd>
+					</dl>
+					</div>
+
+					<div id="contact_thanks">
+						<h3>Thanks for submitting!</h3>
+						<p>Hey, you did it!  This is now an in-page form submission.</p>
+					</div>
+
+					<div id="overlay"></div>
+							<h1>Contact Us</h1>
+							<form id="contact">
+								<label for="name">Name</label><input name="name" type="text" placeholder="Your name here" /><br />
+								<label for="email">eMail</label><input name="email" type="text" /><br />
+								<label for="message">Your message here:<br /></label>
+								<textarea name="message" cols="40" rows="10" placeholder="Enter your message here"></textarea><br />
+								<input type="submit" value="Send" />
+							</form>
+					
+
+			</div>
+		 </div>
+						
+				
+
+
+		<div class='social-media'>
+			<a href='https://www.facebook.com/dipintoguitars' target="_blank"><img src='../public/images/iconfb.png' alt='myspace'></a>
+			<a href='https://www.youtube.com/user/DiPintoGuitar?feature=mhsn' target="_blank"><img src='../public/images/iconyt.png' alt='facebook'></a>
+			<a href='https://www.pinterest.com/dipintogutiars/' target="_blank"><img src='../public/images/iconp.png' alt='facebook'></a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+.content {
+  height: 850px;
+}
+
+.buffer {
+  padding: 50px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 3.5vw;
+  margin-top: -20px;
+  border-bottom: solid black 1px;
+  border-left: solid black 7px;
+  border-right: solid black 7px;
+  border-radius: 10px 10px 100px 100px;
+}
+
